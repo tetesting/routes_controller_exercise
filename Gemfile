@@ -9,10 +9,17 @@ gem 'sqlite3'
 
 gem 'ffaker'
 
-
 gem 'thin'
 
 gem 'quiet_assets', :group => :development
+
+gem 'mime-types', '1.23'
+
+group :development do
+  gem 'pry'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
+end
 
 
 # Gems used only for assets and not required
