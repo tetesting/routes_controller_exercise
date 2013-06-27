@@ -1,11 +1,15 @@
-<% first_product = Product.first %>
+<% all_products = Product.includes(:user).all %>
 <h2>Hello World</h2>
 
 <p>
-  Product Name: "<%= first_product.name %>"" costs $<%= first_product.price %>
-</p>
-<p>
-  The seller for this product is named '<%= first_product.user.name %>'
+<ul><% all_products.each do |product| %>
+  <li><ul>
+    <li>Name: <%= product.name %></li>
+    <li>Price: <%= product.price %></li>
+    <li>Customer: <%= product.user.name %></li>
+  </ul></li><br/>
+  <% end %>
+</ul>
 </p>
 
 <footer>
