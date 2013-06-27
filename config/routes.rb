@@ -2,6 +2,7 @@ ControllerExercise::Application.routes.draw do
 
 
   get '/products' => 'products#index'
+  get '/products/:page_size/:page_num' => 'products#paginate'
 
   resources :users
 
