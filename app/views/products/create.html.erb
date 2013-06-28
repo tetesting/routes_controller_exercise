@@ -1,0 +1,14 @@
+<h2>Create Product</h2>
+
+<h3>Inserting product... (method 2 -- the better way)</h3>
+<% product = Product.new params[:product] %>
+<%= product.save %>
+<% if product.save %>
+  <h2>Product successfully saved</h2>
+  <p>Product: <%= product.inspect %></p>
+<% else %>
+  <h2>Product failed to be saved</h2>
+  <%= product.errors.full_messages %>
+  <br/>Go back and fix the problem
+<% end %>
+

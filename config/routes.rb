@@ -2,7 +2,12 @@ ControllerExercise::Application.routes.draw do
 
 
   get '/products' => 'products#index'
+  get '/products/new' => 'products#new'
   get '/products/:page_size/:page_num' => 'products#paginate'
+
+  post '/products' => 'products#create'
+  get '/products/newa' => 'products#newa'
+  post '/products/createa' => 'products#createa'
 
   resources :users
 
