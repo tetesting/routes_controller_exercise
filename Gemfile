@@ -13,7 +13,7 @@ gem 'thin'
 
 gem 'quiet_assets', :group => :development
 
-gem 'mime-types', '1.23'
+gem 'mime-types'
 
 group :development do
   gem 'pry'
